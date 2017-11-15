@@ -1,0 +1,112 @@
+
+#panel{
+  background-image: url("app/analysisComponent/panel.png");
+visibility: visible;
+  float: left;
+  margin-left: 40px;
+  margin-right: 0px;
+  height: 100%;
+  width:250px;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  
+}
+
+
+/*buttons group of menu bar in the panel tag.*/
+#buttonsgroup{
+  
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/*buttons of the buttonsgroup of menu bar in the panel tag.*/
+#btn{
+ 
+  display: block;
+  padding-top: 5%;
+  padding-left: 15%;   
+  text-decoration: none;
+  height: 50px;
+  font-size: 16px;
+  color: #869fb1;
+  text-indent:initial;
+}
+
+/* on button mouse hover, change color of buttons. */
+#btn:hover {
+  color: #f1f1f1;
+  font-size: 16px;
+  cursor: pointer;
+  background-image: url("img2.png");
+  padding-left: 16%;
+  border-left: 4px solid red;
+}
+#btn.active{
+ color: #f1f1f1;
+  font-size: 16px;
+  cursor: pointer;
+  background-image: url("img2.png");
+  padding-left: 16%;
+  border-left: 4px solid red;
+}
+
+
+#container{
+   width: 100%;
+   height: 100%;
+   align-self: center;
+    float: right;
+    margin-top: 100px;
+    margin-left: 400px;
+    margin-right: 50px;
+    background-color: gray;
+    position: fixed;
+    overflow: hidden;
+
+}
+  .axis text {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+
