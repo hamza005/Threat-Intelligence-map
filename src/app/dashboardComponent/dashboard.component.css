@@ -1,0 +1,446 @@
+
+ /*container div for whole body */
+
+#container1{
+  background: url(img2.png) no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin:0 auto;
+    margin-right: 20px;
+    margin-top: 0;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    float: right;
+    overflow: visible;
+    margin-right: 0;  
+    position: fixed;
+}
+
+ /*container div for D3 datamap */
+
+
+#container{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  margin-top: 3%;
+
+
+}
+
+/* div for real time attacks information of attacker and target.*/
+#information{
+  height: 30%;
+  width: 50%;
+  bottom: 0;
+  margin-bottom: 5px;
+  background:transparent;
+  position: absolute;
+  line-height: 1;
+  margin-left: 50%;
+  font-size: 11px;
+  overflow: hidden;
+  transition: 0.5s;
+
+}
+
+ /*container div for attacker's biography */
+
+#attackinfo{
+  height: 95%;
+  width: 70%;
+  bottom: 0;
+  margin-left: 28%;
+  background-color: rgba(28,43,54,.3);
+  margin-right: 30px;
+  position: absolute;
+  line-height: 1.1;
+  overflow: auto;
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  transition: 0.5s;
+}
+
+ /*container div for Session's list */
+
+#sessioninfo{
+  height: 95%;
+  width: 20%;
+  background-color: rgba(0,0,0,.5);
+  bottom: 0;
+  float: right;
+  margin-left: 50px;
+  color: white;
+  position: absolute;
+  line-height: 1;
+  font-size: 14px;
+  text-align: center;
+  overflow: auto;
+}
+#sessioninfo:hover{
+  cursor: pointer;
+}
+#flscrn{
+  background-color:#67C8FF ;
+  margin-left: 24%;
+  margin-top: 1.5%;
+}
+
+ /*container div for Lab name Powered by ASERG */
+
+#mention_lab{
+  width: 30%;
+  height: 34%;
+  bottom: 0;
+  margin-left: 69%;
+  position: fixed;
+  float: right;
+  color: #67C8FF;
+  background: transparent;
+  text-align: right;
+  font-size: 24px;
+}
+
+ /*container div for Globe name */
+
+
+#globename{
+  width: 13%;
+  height: 31%;
+  bottom: 0;
+  margin-left: 2%;
+  position: fixed;
+  color: #67C8FF;
+  border-top: 2px solid #67C8FF;
+  background: transparent;
+  text-align: right;
+  font-size: 24px;
+}
+
+#atkr{
+  height: 35px;
+  width: 35px;
+}
+#atkrow{
+  width: 9%;
+  height: 31%;
+  bottom: 0;
+  margin-left: 2%;
+  position: fixed;
+  color: #67C8FF;
+  border-top: 2px solid #67C8FF;
+  background: transparent;
+  text-align: right;
+  font-size: 24px;
+}
+
+ /* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    text-decoration: none;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+} 
+
+
+
+
+
+ /*container div for Session counter */
+
+.counter {
+  float: right;
+  margin-top: 2px;
+  padding: 0 6px;
+  line-height: 18px;
+  font-size: 12px;
+  font-weight: bold;
+   background-color: #67C8FF;
+   color: black;
+  border-radius: 9px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px rgba(255, 255, 255, 0.2);
+  margin-right: 20px;
+}
+
+/* table inside tha attackerinfo div tag.*/
+#table {
+     width: 100%;
+     border:1;
+     border-color: white;
+}
+/*head of the table. */
+#thead {
+    background-color: #67C8FF;
+    color: black;
+    height: 25px;
+    margin-bottom: 2px;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    position: static;
+    width: 100%;
+}
+
+
+/* for all heading entries of the table head.*/
+#th{
+  text-align: center;
+}
+td{
+  font-size: 14px;
+  color: orangered;
+  font-weight: bold;
+}
+
+
+/*for the body tag of the table where all information is shown.*/
+#info{
+
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  text-indent: 2px;
+  overflow: auto;
+}
+
+ /*container div for Showing time */
+
+#timediv{
+  height: 10%;
+  width: 13%;
+  top: 0;
+  text-align: right;
+  color: white;
+  margin-top: 2%;
+  margin-left: 85%;
+  border-top: 2px solid #67C8FF;
+  border-bottom: 2px solid #67C8FF;
+  z-index: 1;
+  background:transparent;
+  position: absolute;
+  overflow: hidden;
+}
+
+
+ /*container div for upper panel to alert */
+
+
+#newattack{
+  height: 5.5em;
+  width: 30%;
+  background-color: rgba(0,0,0,.5);
+  top: 0;
+  margin-top: 2%;
+  border-top: 2px solid #67C8FF;
+  margin-left: 35%;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  transition: 0.5s;
+  line-height: 1;
+  font-size: 14px;
+  overflow: hidden;
+  padding-top: 2px;
+  text-align: left;
+}
+
+svg{
+  height: 30%;
+  width: 16%;
+  bottom: 0;
+  margin-left: 1%;
+  position: fixed;
+}
+
+h2{
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Liberation Sans Narrow";
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+#newattackrow{
+  font-size: 14px;
+  transition: 0.5s;
+  text-align: left;
+  color: #67C8FF;
+  border-bottom: 5px solid transparent;
+}
+#line{
+  height: 5%;
+  width: 20%;
+  background: transparent;
+  top: 0;
+  margin-top: 2%;
+  margin-left: 2%;
+  color: white;
+  position: absolute;
+  border-top: 2px solid #67C8FF;
+  line-height: 1;
+  font-size: 14px;
+  overflow: hidden;
+  padding-top: 2px;
+  text-align: left;
+}
+
+
+ /*container div for Attacks counter */
+
+
+#attacks_today{
+   height: 9%;
+  width: 13%;
+  margin-top: 7.5%;
+  z-index: 1;
+  background: transparent;
+  float: right;
+  right: 0;
+  position: fixed;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  margin-right: 2%;
+  font-weight: bold;
+}
+#total_attacks{
+  height: 5%;
+  width: 10%;
+  margin-top: 9%;
+  z-index: 1;
+  background: transparent;
+  float: right;
+  right: 0;
+  position: fixed;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  margin-right: 2%;
+  font-weight: bold;
+}
+
+#social{
+  height: 10%;
+  width: 3%;
+  margin-top: 12%;
+  z-index: 1;
+  background: transparent;
+  float: right;
+  right: 0;
+  position: fixed;
+
+
+}
+
+.fa {
+  padding: 10px;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  height: 40px;
+
+    transition: 0.3s;
+}
+
+.fa:hover {
+    width: 125%;
+    transition: 0.3s;
+    
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+#turnglobe{
+  margin-left: 2%;
+  height: 27%;
+  width: 16%;
+  bottom: 0;
+  padding-top: 0.5%;
+  position: fixed;
+}
+#worldmap {
+  margin:0 auto;}
+#worldmap svg {background: black;border-radius: 100px;box-shadow:0 0 10px rgba(0,0,0,0.4); }
+.land {fill: rgba(188,188,188,.94); }

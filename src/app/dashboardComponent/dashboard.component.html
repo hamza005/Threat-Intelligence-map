@@ -1,0 +1,116 @@
+<!-- Main container in which all the other dives and containers are docked -->
+<div id="container1">
+    <!-- Div for the social media contacts slide bar -->
+    <div id="social">
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-skype"></a>
+    </div>
+    <!-- Div for a single line at top left corner of the dashboard -->
+    <div id="line"></div>
+    <!-- Top middle dic of the dsahboard to show the attacking and targeted country -->
+    <div id="newattack">
+        <table id="table" *ngFor="let event of events" [class.selected]="event === selectedEvent">
+            <tr id="newattackrow">
+                [X] New Attack: From [{{event.src.country}}] to [{{event.dst.country}}]
+            </tr>
+        </table>
+    </div>
+    <!-- Div to show the local time clock -->
+    <div id="timediv">
+        <h2>LOCAL TIME</h2>
+        <h2>
+            <iframe src="http://free.timeanddate.com/clock/i5whig3k/n106/tlpk/fn17/fs34/fcfff/tct/pct/ahr/ftb/pd2/th1" frameborder="0"
+                width="139" height="41" allowTransparency="true"></iframe>
+        </h2>
+    </div>
+    <div id="attacks_today">Session's Attacks</div>
+    <div id="total_attacks"></div>
+    <!-- Div to hold to controls for the revolving globe at bottom left corner -->
+    
+    <!-- Div to show the globe name i.e 'Attackers' -->
+    <div id="globename">
+    <table>
+    <tr>
+    <td>
+        <img src="https://2017.london.wordcamp.org/files/2017/01/KS-Logo-Yellow-300x300.png" id="atkr">
+        </td>
+        <td id="atkrow">Attackers</td>    
+    </tr>    
+    </table>    
+    </div>
+    <!-- Svg element to show the revolving globe -->
+    
+<section id="turnglobe">
+  <div id="worldmap"></div>
+  </section>
+    <!-- Div to hold the datamaps and arcs animation and real time data -->
+    <div id="container">
+        <div id="myNav" class="overlay">
+            <!-- Button to close the overlay navigation -->
+            <a href="javascript:void(0)" class="closebtn" (click)="closeNav()">&times;</a>
+            <!-- Overlay content -->
+            <div class="overlay-content">
+                <a href="#">Country: {{name}}</a>
+                <a href="#">Targets</a>
+                <a href="#">Attacks</a>
+                <a href="#">Services</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Div to show the 'powered by' line at the top on information div -->
+<div id="mention_lab">Powered by ASERG Labs</div>
+<!-- Div to show all information about the attackers and targeted instances -->
+<div id="information">
+<!-- Button to hide the information bar
+    <button id="flscrn" (click)="full()">&#9776;</button>
+  
+    <div id="sessioninfo">
+        <table id="table">
+            <thead id="thead">
+                <tr>
+                    <th id="th">Session ID</th>
+                    <th id="th">Counts</th>
+                </tr>
+            </thead>
+            <tbody id="info" *ngFor="let sort of sorted">
+                <tr *ngFor="let a of sort">
+                    <td (click)="openNav()">{{a[0]}}</td>
+                    <td class="counter">{{a[1]}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    -->
+    <div id="attackinfo">
+        <table id="table">
+            <thead id="thead">
+                <tr>
+                    <th id="th">User Name</th>
+                    <th id="th">Location</th>
+                    <th id="th">Attacker</th>
+                   <!-- <th id="th">Destination</th> -->
+                    <th id="th">TimeStamp</th>
+                    <th id="th">Service</th>
+                    <th id="th">port</th>
+                </tr>
+            </thead>
+           
+            <tbody id="info" *ngFor="let event of events" [class.selected]="event === selectedEvent">
+                <tr>
+                    <td> root {{event.userName}} </td>
+                    <td> {{event.src.country}}</td>
+                    <td> {{event.srcIP}}</td>
+                    <!--<td> {{event.dstIP}}</td> -->
+                    <td> {{event.timeStamp | date: 'mediumTime'}}</td>
+                    <td> {{event.service}}</td>
+                    <td> {{event.dstPort}}</td>
+                </tr>
+            </tbody>
+       
+        </table>
+    </div>
+</div>
