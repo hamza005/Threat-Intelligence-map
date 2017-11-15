@@ -1,0 +1,38 @@
+<br><br>
+<div class="container">
+
+
+    <form>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" (click)="getData()">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <table class="table">
+        <thead class="thead-default">
+            <tr>
+                <th>Index</th>
+                <th>ID</th>
+                <th>Age</th>
+                <th>Data</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let sort of mydata">
+            <tr>
+                <td>{{sort._index}}</td>
+                <td>{{sort._id}}</td>
+                <td>{{sort._source.age}}</td>
+                <td>{{sort._source.created_on}}</td>
+            </tr>
+        </tbody>
+    </table>
+<div id="builder"></div>
+  <button class="btn btn-success" id="btn-set">Set Rules</button>
+  <button class="btn btn-primary" id="btn-get">Get Rules</button>
+  <button class="btn btn-warning" id="btn-reset">Reset</button>
+</div>
