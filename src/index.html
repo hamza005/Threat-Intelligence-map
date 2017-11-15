@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Glutton</title>
+  <base href="/">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Style Sheets -->
+
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="node_modules/jQuery-QueryBuilder/dist/css/query-builder.default.css">
+  
+
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+
+  <!-- scripting files for Datamap -->
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+  <script src="https://d3js.org/d3-selection-multi.v1.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="node_modules/datamaps/dist/datamaps.world.js"></script>
+  <script src="https://d3js.org/d3-geo.v1.min.js"></script>
+
+  <!-- scripting files for charts and graphs -->
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/bootstrap/js/tooltip.js"></script>
+  <script src="node_modules/jquery-extendext/jQuery.extendext.min.js"></script>
+
+  <!-- scripting files for query builder component -->
+
+  <script src="node_modules/jQuery-QueryBuilder/dist/js/query-builder.standalone.min.js"></script>
+  <script src="node_modules/jQuery-QueryBuilder/dist/js/query-builder.min.js"></script>
+
+
+  <!-- scripting files for charts and graphs -->
+
+  <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+
+  
+
+  <!--Costum javascript files-->
+
+  <script src="scriptfile.js"></script>
+
+
+  <script>
+    System.import('main.js').catch(function (err) { console.error(err); });
+  </script>
+</head>
+
+<body>
+  <my-app>Loading AppComponent content here ...</my-app>
+</body>
+
+</html>

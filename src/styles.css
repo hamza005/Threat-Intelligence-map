@@ -1,0 +1,299 @@
+#map{
+  height:550px;
+  width: 55%;
+  margin-left: 270px;
+  margin-top: 1%;
+  position: fixed;
+  padding-bottom: 0px;
+  overflow: hidden;
+  background: white; 
+  border: 1px solid #d7d7d7;
+}
+#whole{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: #EBEBEB;
+}
+#globel_img{
+  width: 100%;
+  height: 10%;
+  margin-left: 250px;
+  margin-top: 0%;
+  top: 0;
+  background: white;
+}
+#iconic{
+  width: 5%;
+  height: 100%;
+  align-items: center;
+}
+#imgIcon{
+  margin-top: 20px;
+  margin-left: 20px;
+  width: 50%;
+  height: 50%;
+  align-self: center;
+}
+
+
+#globel_threat{
+  height: 5%;
+  width: 100%;
+  margin-left: 70px;
+  float: top;
+  top: 0;
+  margin-top: 5.4%;
+  position: fixed;
+  background: white;
+  font-size: 24px;
+  text-align: top;
+}
+#info_table{
+width: 25%;
+height: 550px;
+background: white;
+margin-top: 1%;
+border: 1px solid #D7D7D7;
+margin-left: 74%;
+
+}
+
+#title{
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 22px;
+  float: left;
+  margin-left: 75px;
+  
+}
+
+/* panel for Attack analysis graphs and statistic analysis home page */
+
+#panel{
+  background-image: url("app/analysisComponent/panel.png");
+  visibility: visible;
+  float: left;
+  margin-right: 0px;
+  height: 100%;
+  width:250px;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  transition: 0.5s;
+  
+}
+/*buttons group of menu bar in the panel tag.*/
+#buttonsgroup{
+  
+  display: block;
+  position: relative;
+  width: 100%;
+  margin-top: 30px;
+}
+
+/*buttons of the buttonsgroup of menu bar in the panel tag.*/
+#btn{
+ 
+  display: block;
+  padding-top: 5%;
+  padding-left: 15%;   
+  text-decoration: none;
+  height: 50px;
+  font-size: 16px;
+  color: #869fb1;
+  text-indent:initial;
+  transition: 0.25s;
+}
+
+/* on button mouse hover, change color of buttons. */
+#btn:hover {
+  color: #f1f1f1;
+  font-size: 16px;
+  cursor: pointer;
+  background-image: url("img2.png");
+  padding-left: 16%;
+  border-left: 4px solid red;
+}
+#btn.active{
+ color: #f1f1f1;
+  font-size: 16px;
+  cursor: pointer;
+  background-image: url("img2.png");
+  padding-left: 16%;
+  border-left: 4px solid red;
+}
+
+/*covers the whole body of the application interface, sets background image and color and dimentions attributes*/
+#body{
+   
+   height:752px;
+   width: 1400;
+   margin-bottom: 0px;
+   padding-bottom: 0px;
+   overflow: hidden;
+   background-color: lightgrey;
+}
+.header{
+  height: 80px;
+}
+.header2{
+  height: 3px;
+  background-color: red;
+}
+
+
+
+  ul {
+    list-style-type: none;
+    margin-top:  30px;
+    padding-right: 20px;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+  .li2 {
+    float: right;
+}
+
+li a {
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover{
+  
+
+}
+
+
+li a.active {
+    color: black;
+    font-weight: bold;
+
+}
+
+
+
+/* for charts and graphs designing */
+.axis {
+	  font: 14px sans-serif;
+	}
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: black;
+  }
+  
+  .area {
+  fill: #E3F3FD;
+}
+
+path { 
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+  /* div for the charts ang graphs in the analysis section */
+  .chart{
+    height: 80%;
+    width: 70%;
+    margin:0 auto;
+    position: fixed;
+    overflow: hidden; 
+    margin-left: 380px; 
+    border-style: groove;
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+  #graph_title{
+  float: right;
+  margin-left: 380px;
+  height: 5%;
+  width:69.96%;
+  position: fixed;
+  background-color: #363f44;
+}
+p{
+  margin-left: 3%;
+  font-size: 20px;
+  padding-top: .5%;
+  padding-left: 2%;
+  vertical-align: middle;
+  color:white;
+ 
+}
+
+  /* vertical bars of the graphs */
+.bar {
+  fill: #008081;
+  transition: 0.3s;
+}
+.bar:hover {
+  fill: #003152;
+}
+.y.axis path {
+  display: flex;
+}
+.x.axis path {
+  display: flex;
+}
+.x.axis line {
+  stroke: gray;
+    stroke-opacity: .2;
+}
+.y.axis line {
+  stroke: gray;
+  stroke-opacity: .2;
+}
+
+
+canvas,
+svg {
+  position: absolute;
+  padding-right: 3%;
+}
+
+.grid .tick line {
+  stroke: #fff;
+}
+
+.grid--x .domain {
+  fill: #e7e7e7;
+  stroke: none;
+}
+
+.grid--y .domain,
+.axis .domain {
+  display: none;
+}
+
+
+.dot {
+  stroke: #000;
+}
+
+.tooltip {
+  position: absolute;
+  width: 200px;
+  height: 28px;
+  pointer-events: none;
+}
+
+#img{
+  height: 80px;
+  width: 200px;
+  margin-left: 40px;
+}
+
+
+
+#worldmap {
+  margin:0 auto;}
+#worldmap svg {background:rgba(28,43,54,.3);border-radius: 100px;box-shadow:0 0 10px rgba(0,0,0,0.4); }
+.land {fill: transparent; }
